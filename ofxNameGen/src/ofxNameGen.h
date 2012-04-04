@@ -32,7 +32,7 @@
 
 #pragma once
 
-#define ALPHABET	28
+#define ALPHABET    28
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -44,41 +44,41 @@ using namespace std;
 
 
 
-class ofxNameGen{			
-	
-	public:
-	
-			ofxNameGen()	{reset();}
-			~ofxNameGen()	{}
-	
-			bool			setup(string filename);
-			void			addWords(string sym);
-			void			setNumLetters(const int nl = 7) {nLetters = nl;}
-			const int		getNumLetters(){return nLetters;}
-			const string	generate();
-			const string	generateFromChar(char c);
-			const string	getWord(){return words;}
-	
-			void			post();
-			void			resetTable();
-			void			reset();
-	
-			int*			getFrequencyTablePtr();
-			int				alphabet;
-	
-	
-		private:
-			
-			int				ulWordTable[ALPHABET][ALPHABET];  
-			int				nLetters;
-			string			words;
-			string			wordsdelim;
-			int				txtidx;
-			int				txtmax;			
-			bool			bResetTable;
-			
-			const int		getLetterPosition(int cPrevious);			
-			
+class ofxNameGen{            
+    
+    public:
+    
+            ofxNameGen()    {reset();}
+            ~ofxNameGen()    {}
+    
+            bool            setup(string filename);
+            void            addWords(string sym);
+            void            setNumLetters(const int nl = 7) {nLetters = nl;}
+            const int       getNumLetters(){return nLetters;}
+            const string    generate();
+            const string    generateFromChar(char c);
+            const string    getWord(){return words;}
+    
+            void            post();
+            void            resetTable();
+            void            reset();
+    
+            int*            getFrequencyTablePtr();
+            int             alphabet;
+    
+    
+        private:
+            
+            int             ulWordTable[ALPHABET][ALPHABET];  
+            int             nLetters;
+            string          words;
+            string          wordsdelim;
+            int             txtidx;
+            int             txtmax;            
+            bool            bResetTable;
+            
+            const int       getLetterPosition(int cPrevious);            
+            
 };
 
 

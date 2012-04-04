@@ -41,39 +41,39 @@
 
 
 bool ofxNameGen::setup(string filename){
-	
-	reset();
-	bool loaded = false;
-	const string fn = ofToDataPath(filename);
-	
-	ifstream infile;
-	infile.open(fn.c_str());	
-	vector <string> txts;
-	
-	while (!infile.eof()) {		
-		string		   txt;
-		getline(infile,txt);
-		txts.push_back(txt);
-	}	
-	infile.close();
+    
+    reset();
+    bool loaded = false;
+    const string fn = ofToDataPath(filename);
+    
+    ifstream infile;
+    infile.open(fn.c_str());    
+    vector <string> txts;
+    
+    while (!infile.eof()) {        
+        string         txt;
+        getline(infile,txt);
+        txts.push_back(txt);
+    }    
+    infile.close();
 
-	if(txts.size() > 0){
-		loaded = true;
-	}
-		
-	for(int i=0; i<txts.size();i++){
-		// TODO: fix this to multiple delims
-//		vector <string> strings = ofSplitString( ofToLower(txts[i]), wordsdelim , true, true);
-		vector <string> strings = ofSplitString( txts[i], " " ); 
-		
-		for(int j=0; j<strings.size(); j++){			
-			addWords(strings[j]);
-		}		
-	}
-	
-	
-	return loaded;	
-	
+    if(txts.size() > 0){
+        loaded = true;
+    }
+        
+    for(int i=0; i<txts.size();i++){
+        // TODO: fix this to multiple delims
+//        vector <string> strings = ofSplitString( ofToLower(txts[i]), wordsdelim , true, true);
+        vector <string> strings = ofSplitString( txts[i], " " ); 
+        
+        for(int j=0; j<strings.size(); j++){            
+            addWords(strings[j]);
+        }        
+    }
+    
+    
+    return loaded;    
+    
 }
 
 
@@ -82,11 +82,11 @@ bool ofxNameGen::setup(string filename){
 
 
 void ofxNameGen::addWords(string sym){
-	
-	int nWordLength, nFirstLetter, nLastLetter;
+    
+    int nWordLength, nFirstLetter, nLastLetter;
 
-	string small = ofToLower(sym);
-	
+    string small = ofToLower(sym);
+    
     nWordLength = sym.length();
     nFirstLetter = ( small[0] - 'a' ) + 1;
     nLastLetter =  ( small[nWordLength-1] - 'a' ) + 1;
@@ -95,13 +95,13 @@ void ofxNameGen::addWords(string sym){
     ulWordTable[0][nFirstLetter]++; //space followed by letter
     ulWordTable[nLastLetter][27]++; //letter followed by space
     for (int i=0; i<nWordLength-2; i++) {
-		nFirstLetter = ( small[i] - 'a' ) + 1;
-		nLastLetter =  ( small[i+1] - 'a' ) + 1;
-		ulWordTable[nFirstLetter][nLastLetter]++;
+        nFirstLetter = ( small[i] - 'a' ) + 1;
+        nLastLetter =  ( small[i+1] - 'a' ) + 1;
+        ulWordTable[nFirstLetter][nLastLetter]++;
     }
-	
-	
-	
+    
+    
+    
 }
 
 
@@ -110,13 +110,13 @@ void ofxNameGen::addWords(string sym){
 
 
 void ofxNameGen::post(){
-		for (int j=0; j<ALPHABET; j++) {
-			printf("%02d ",j);
-			for (int i=0; i<ALPHABET; i++) {
-				printf(" %02d ", ulWordTable[i][j]);
-			} 
-			printf("\n");
-		}		
+        for (int j=0; j<ALPHABET; j++) {
+            printf("%02d ",j);
+            for (int i=0; i<ALPHABET; i++) {
+                printf(" %02d ", ulWordTable[i][j]);
+            } 
+            printf("\n");
+        }        
 }
 
 
@@ -124,15 +124,15 @@ void ofxNameGen::post(){
 
 
 
-void ofxNameGen::reset(){	
-	bResetTable = false;
-	nLetters = 7;
-	words = "";
-	wordsdelim = ", {}()+-\".;'?!: . )~ºª´`0123456789";
-	txtidx = 0;
-	txtmax = 0;
-	alphabet = ALPHABET;
-	resetTable();
+void ofxNameGen::reset(){    
+    bResetTable = false;
+    nLetters = 7;
+    words = "";
+    wordsdelim = ", {}()+-\".;'?!: . )~ºª´`0123456789";
+    txtidx = 0;
+    txtmax = 0;
+    alphabet = ALPHABET;
+    resetTable();
 }
 
 
@@ -140,12 +140,12 @@ void ofxNameGen::reset(){
 
 
 
-void ofxNameGen::resetTable(){	
-	for (int j=0; j<ALPHABET; j++) {
-		for (int i=0; i<ALPHABET; i++) {
-			ulWordTable[i][j] = 0;
-		} 
-	}		
+void ofxNameGen::resetTable(){    
+    for (int j=0; j<ALPHABET; j++) {
+        for (int i=0; i<ALPHABET; i++) {
+            ulWordTable[i][j] = 0;
+        } 
+    }        
 }
 
 
@@ -155,33 +155,33 @@ void ofxNameGen::resetTable(){
 
 const string ofxNameGen::generate(){
 
-	int nLetterPosition;
-	
+    int nLetterPosition;
+    
     /// generate random string
     char data[nLetters];
     for (int i=0; i<nLetters; i++) {
-		data[i] = (char) ofRandom(255);
+        data[i] = (char) ofRandom(255);
     }
-	
+    
     // 1. find first letter    
     nLetterPosition = getLetterPosition(0);
     data[0] = (char)nLetterPosition;
-	
-	
+    
+    
     // 2- compute rest of word
     for (int i=1; i<nLetters;i++) {
-		nLetterPosition = getLetterPosition(nLetterPosition);
-		data[i] = (char) nLetterPosition;
+        nLetterPosition = getLetterPosition(nLetterPosition);
+        data[i] = (char) nLetterPosition;
     }
-		
-	// 3- char -> string	
-	stringstream ss;
+        
+    // 3- char -> string    
+    stringstream ss;
     for (int i=0; i<nLetters; i++) {
-		ss << data[i];
-    }	
-	ss >> words;
-		
-	return words;
+        ss << data[i];
+    }    
+    ss >> words;
+        
+    return words;
 }
 
 
@@ -190,31 +190,31 @@ const string ofxNameGen::generate(){
 
 
 const string ofxNameGen::generateFromChar(char c){
-	
-	int nLetterPosition;
-	
+    
+    int nLetterPosition;
+    
     /// generate random string
     char data[nLetters];
-	
+    
     // 1. find first letter    
     nLetterPosition = getLetterPosition((int)c);
     data[0] = (char)nLetterPosition;
-	
-	
+    
+    
     // 2- compute rest of word
     for (int i=1; i<nLetters;i++) {
-		nLetterPosition = getLetterPosition(nLetterPosition);
-		data[i] = (char) nLetterPosition;
+        nLetterPosition = getLetterPosition(nLetterPosition);
+        data[i] = (char) nLetterPosition;
     }
-	
-	// 3- char -> string	
-	stringstream ss;
+    
+    // 3- char -> string    
+    stringstream ss;
     for (int i=0; i<nLetters; i++) {
-		ss << data[i];
-    }	
-	ss >> words;
-	
-	return words;
+        ss << data[i];
+    }    
+    ss >> words;
+    
+    return words;
 }
 
 
@@ -222,34 +222,34 @@ const string ofxNameGen::generateFromChar(char c){
 
 
 
-const int ofxNameGen::getLetterPosition(int cPrevious){		
-	int nCounter;
+const int ofxNameGen::getLetterPosition(int cPrevious){        
+    int nCounter;
     int ulFrequencyTotal = 0;
     int ulFrequencyRunningTotal = 0;
     int ulRandomLetter = 0;
     int nChoice;
-	
+    
     int nPrevious = (cPrevious-'a')+1;
     if (nPrevious<=0) nPrevious = 0;
-	
+    
     int lsum = 0;
     for ( int i=0; i<28;i++) {
-		lsum +=  ulWordTable[nPrevious][i];
+        lsum +=  ulWordTable[nPrevious][i];
     }
-		
+        
     do {
-		nChoice = (int)ofRandom(65536)%ALPHABET;
+        nChoice = (int)ofRandom(65536)%ALPHABET;
     } 
     while (ulWordTable[nPrevious][nChoice]==0);
-		
+        
     // Change nChoice from a reference into a character
     if ((nChoice == 0) || (nChoice == 27))
-		nChoice = ' ';
+        nChoice = ' ';
     else
-		nChoice = 'a' + (nChoice - 1);
-	
+        nChoice = 'a' + (nChoice - 1);
+    
     return nChoice;
-			
+            
 }
 
 
@@ -258,7 +258,7 @@ const int ofxNameGen::getLetterPosition(int cPrevious){
 
 
 int* ofxNameGen::getFrequencyTablePtr(){
-	return &ulWordTable[0][0];
+    return &ulWordTable[0][0];
 }
 
 
