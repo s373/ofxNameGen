@@ -1,0 +1,198 @@
+// !$*UTF8*$!
+{
+	00688CE414A38D1200C97F04 /* example-stochastic-map */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "example-stochastic-map";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	00688CEA14A38D3000C97F04 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	00688CEB14A38D3000C97F04 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	00921230152DC2910045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 611;
+		vrLoc = 0;
+	};
+	00921231152DC2910045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 28";
+		rLen = 0;
+		rLoc = 551;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 0;
+	};
+	00921234152DC3120045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */;
+		name = "testApp.cpp: 15";
+		rLen = 0;
+		rLoc = 343;
+		rType = 0;
+		vrLen = 781;
+		vrLoc = 0;
+	};
+	00921235152DC3120045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 6";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 0;
+	};
+	00921236152DC3120045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 6";
+		rLen = 0;
+		rLoc = 59;
+		rType = 0;
+		vrLen = 558;
+		vrLoc = 0;
+	};
+	00921237152DC3120045BEC5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4B69E1F0A3A1BDC003C02F2 /* testApp.h */;
+		name = "testApp.h: 28";
+		rLen = 0;
+		rLoc = 551;
+		rType = 0;
+		vrLen = 463;
+		vrLoc = 95;
+	};
+	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 00688CE414A38D1200C97F04 /* example-stochastic-map */;
+		activeTarget = E4B69B5A0A3A1756003C02F2 /* example-stochastic-map */;
+		addToTargets = (
+			E4B69B5A0A3A1756003C02F2 /* example-stochastic-map */,
+		);
+		codeSenseManager = 00688CEB14A38D3000C97F04 /* Code sense */;
+		executables = (
+			00688CE414A38D1200C97F04 /* example-stochastic-map */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					361,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					301,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 355320760;
+			PBXWorkspaceStateSaveDate = 355320760;
+		};
+		perUserProjectItems = {
+			00921230152DC2910045BEC5 = 00921230152DC2910045BEC5 /* PBXTextBookmark */;
+			00921231152DC2910045BEC5 = 00921231152DC2910045BEC5 /* PBXTextBookmark */;
+			00921234152DC3120045BEC5 = 00921234152DC3120045BEC5 /* PBXTextBookmark */;
+			00921235152DC3120045BEC5 = 00921235152DC3120045BEC5 /* PBXTextBookmark */;
+			00921236152DC3120045BEC5 = 00921236152DC3120045BEC5 /* PBXTextBookmark */;
+			00921237152DC3120045BEC5 = 00921237152DC3120045BEC5 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 00688CEA14A38D3000C97F04 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	E4B69B5A0A3A1756003C02F2 /* example-stochastic-map */ = {
+		activeExec = 0;
+		executables = (
+			00688CE414A38D1200C97F04 /* example-stochastic-map */,
+		);
+	};
+	E4B69E1E0A3A1BDC003C02F2 /* testApp.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {539, 946}}";
+			sepNavSelRange = "{343, 0}";
+			sepNavVisRange = "{0, 781}";
+		};
+	};
+	E4B69E1F0A3A1BDC003C02F2 /* testApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {539, 341}}";
+			sepNavSelRange = "{551, 0}";
+			sepNavVisRange = "{95, 463}";
+		};
+	};
+}
