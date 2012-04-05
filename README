@@ -1,0 +1,9 @@
+s373.net/x
+openframeworks addon ofxNameGen
+
+/**
+ * stochastic 'infinite' name generation based on table seeded by words 
+ * Portions Copyright (C) Guy W. Lecky-Thompson, 2000
+ * André Sier, 2004, 2010
+ * http://www.gamasutra.com/view/feature/3377/algorithms_for_an_infinite_universe.php?print=1
+ **/
