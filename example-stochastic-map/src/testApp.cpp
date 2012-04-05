@@ -13,8 +13,6 @@ void testApp::setup(){
 void testApp::update(){
 	
 	space += ofMap(mouseY, 0, ofGetHeight(), 0., 1e-3);
-//	fmodf(space, 1e7);
-//	seed = (int)(space * 1e12);
 	seed = (int)(space);
 	
 }
